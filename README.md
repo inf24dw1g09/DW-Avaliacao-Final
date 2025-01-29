@@ -32,5 +32,4 @@ Universidade da Maia 2024/2025
 - [Documentos de apoio](
 - Relatório
 
-### Equipa
-@Camila Olim
+
