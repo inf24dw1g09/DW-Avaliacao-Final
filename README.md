@@ -4,7 +4,7 @@ Para a disciplica de Desenvolvimento WEB I do 1º ano da Licenciatura de Inform�
 Universidade da Maia 2024/2025
 
 ## Objetivo
-Estudo de uma API do tipo REST, realização de uma apresentação e criação de uma coleção no _Postman_.  
+De acordo com o [enunciado](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/main/Documentos%20de%20Apoio/INF-DW1_AvaliacaoFinal_EpocaNormal_ProvaPratica_2024.pdf), o objetivo do trabalho era, após o estudo de uma API do tipo REST, realizar uma apresentação sobre o mesmo e criar de uma coleção no _Postman_ com os respetivos conteúdos.  
 
 ## Tema
 Para este trabalho foi selecionada a API do Discord, uma aplicação de comunicação por texto, vídeo e voz.  
