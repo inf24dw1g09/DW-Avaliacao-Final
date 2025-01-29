@@ -24,7 +24,7 @@ Para este trabalho, foi escolhido o tema _Cosplay_, que é uma atividade na qual
 - Postman
 
 ## Relatório
-- Capítulo 1: [Introdução](
+- Capítulo 1: [Introdução](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/Relatorio/C1.md)
     - Introdução
     - Contextualização do tema
 - Capítulo 2: [Recursos](
