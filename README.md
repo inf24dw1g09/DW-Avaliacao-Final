@@ -8,7 +8,7 @@ Após a seleção do tema, preparar uma base de dados e, através de uma estrat�
 REST para disponibilizar os recursos para uma aplicação Web. 
 
 ## Tema
-Para este trabalho, foi escolhido o tema _Cosplay_, que é uma atividade na qual os praticantes realizam a caracterização e interpretação de personagens fictícias, tentando ao máximo replicar a sua aparência física e, por vezes, também encenar o seu comportamento.
+Para este trabalho, foi escolhido o tema _Cosplay_, conforme indicado na [proposta](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/main/Documentos%20de%20Apoio/DWI_A06927_CamilaOlim_AvaliacaoFinal_Proposta.pdf) entregue, que é uma atividade na qual os praticantes realizam a caracterização e interpretação de personagens fictícias, tentando ao máximo replicar a sua aparência física e, por vezes, também encenar o seu comportamento.
 
 ## Conteúdos
 - API REST
