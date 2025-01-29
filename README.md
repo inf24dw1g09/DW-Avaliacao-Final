@@ -4,8 +4,11 @@ Para a disciplica de Desenvolvimento WEB I do 1º ano da Licenciatura de Inform�
 Universidade da Maia 2024/2025
 
 ## Objetivo
+Após a seleção do tema, preparar uma base de dados e, através de uma estratégia Design-first, desenvolver uma camada de serviços
+REST para disponibilizar os recursos para uma aplicação Web. 
 
 ## Tema
+Para este trabalho, foi escolhido o tema _Cosplay_, que é uma atividade na qual os praticantes realizam a caracterização e interpretação de personagens fictícias, tentando ao máximo replicar a sua aparência física e, por vezes, também encenar o seu comportamento. O _Cosplay_ é uma atividade realizada normalmente em eventos temáticos ou sessões fotográficas, mas também tem uma grande vertente online em diversos tipos de formatos, normalmente partilhado em plataformas como redes sociais. Dado isto, a API criada teve como objetivo representar uma plataforma de partilha de projetos de Cosplay através de publicações.
 
 ## Conteúdos
 - API REST
