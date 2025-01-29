@@ -30,6 +30,6 @@ Universidade da Maia 2024/2025
 - 1 Ficheiro _Postman Collection_ - [CosplayAPI.postman_collection](
 - Aplicação Web
 - [Documentos de apoio](
-- Relatório
+- [Relatório](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-2/Relatorio)
 
 
