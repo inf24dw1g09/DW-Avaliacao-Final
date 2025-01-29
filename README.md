@@ -31,3 +31,6 @@ Universidade da Maia 2024/2025
 - Aplicação Web
 - [Documentos de apoio](
 - Relatório
+
+### Equipa
+@Camila Olim
