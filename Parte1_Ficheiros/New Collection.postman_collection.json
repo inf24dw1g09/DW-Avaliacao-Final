@@ -1,0 +1,1515 @@
+{
+	"info": {
+		"_postman_id": "ba52bbdc-8a01-4d06-9a4f-83b754e8bc4d",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40082471"
+	},
+	"item": [
+		{
+			"name": "Emoji",
+			"item": [
+				{
+					"name": "add my message reaction",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/channels/:channel_id/messages/:message_id/reactions/:emoji_name/@me",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"channels",
+								":channel_id",
+								"messages",
+								":message_id",
+								"reactions",
+								":emoji_name",
+								"@me"
+							],
+							"variable": [
+								{
+									"key": "channel_id",
+									"value": "<string>"
+								},
+								{
+									"key": "message_id",
+									"value": "<string>"
+								},
+								{
+									"key": "emoji_name",
+									"value": "<string>"
+								}
+							]
+						},
+						"description": "Add a reaction on the message for the current user"
+					},
+					"response": [
+						{
+							"name": "204 response for add_my_message_reaction",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/channels/:channel_id/messages/:message_id/reactions/:emoji_name/@me",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"channels",
+										":channel_id",
+										"messages",
+										":message_id",
+										"reactions",
+										":emoji_name",
+										"@me"
+									],
+									"variable": [
+										{
+											"key": "channel_id"
+										},
+										{
+											"key": "message_id"
+										},
+										{
+											"key": "emoji_name"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Client error response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/channels/:channel_id/messages/:message_id/reactions/:emoji_name/@me",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"channels",
+										":channel_id",
+										"messages",
+										":message_id",
+										"reactions",
+										":emoji_name",
+										"@me"
+									],
+									"variable": [
+										{
+											"key": "channel_id"
+										},
+										{
+											"key": "message_id"
+										},
+										{
+											"key": "emoji_name"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"code\": \"<integer>\",\n\t\"message\": \"<string>\",\n\t\"errors\": {\n\t\t\"id__\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"mollit_c3d\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"cupidatatf2e\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"eiusmod5b3\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t}\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "delete my message reaction",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/channels/:channel_id/messages/:message_id/reactions/:emoji_name/@me",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"channels",
+								":channel_id",
+								"messages",
+								":message_id",
+								"reactions",
+								":emoji_name",
+								"@me"
+							],
+							"variable": [
+								{
+									"key": "channel_id",
+									"value": "<string>"
+								},
+								{
+									"key": "message_id",
+									"value": "<string>"
+								},
+								{
+									"key": "emoji_name",
+									"value": "<string>"
+								}
+							]
+						},
+						"description": "Remove a reaction on the message for the current user"
+					},
+					"response": [
+						{
+							"name": "204 response for delete_my_message_reaction",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/channels/:channel_id/messages/:message_id/reactions/:emoji_name/@me",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"channels",
+										":channel_id",
+										"messages",
+										":message_id",
+										"reactions",
+										":emoji_name",
+										"@me"
+									],
+									"variable": [
+										{
+											"key": "channel_id"
+										},
+										{
+											"key": "message_id"
+										},
+										{
+											"key": "emoji_name"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Client error response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/channels/:channel_id/messages/:message_id/reactions/:emoji_name/@me",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"channels",
+										":channel_id",
+										"messages",
+										":message_id",
+										"reactions",
+										":emoji_name",
+										"@me"
+									],
+									"variable": [
+										{
+											"key": "channel_id"
+										},
+										{
+											"key": "message_id"
+										},
+										{
+											"key": "emoji_name"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"code\": \"<integer>\",\n\t\"message\": \"<string>\",\n\t\"errors\": {\n\t\t\"id__\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"mollit_c3d\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"cupidatatf2e\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"eiusmod5b3\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t}\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "list message reactions by emoji",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/channels/:channel_id/messages/:message_id/reactions/:emoji_name?after=<string,null>&limit=<integer,null>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"channels",
+								":channel_id",
+								"messages",
+								":message_id",
+								"reactions",
+								":emoji_name"
+							],
+							"query": [
+								{
+									"key": "after",
+									"value": "<string,null>"
+								},
+								{
+									"key": "limit",
+									"value": "<integer,null>"
+								}
+							],
+							"variable": [
+								{
+									"key": "channel_id",
+									"value": "<string>"
+								},
+								{
+									"key": "message_id",
+									"value": "<string>"
+								},
+								{
+									"key": "emoji_name",
+									"value": "<string>"
+								}
+							]
+						},
+						"description": "Lists [users](https://discord.com/developers/docs/resources/user#user-object) that reacted to the message with a given emoji"
+					},
+					"response": [
+						{
+							"name": "200 response for list_message_reactions_by_emoji",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/channels/:channel_id/messages/:message_id/reactions/:emoji_name?after=<string,null>&limit=<integer,null>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"channels",
+										":channel_id",
+										"messages",
+										":message_id",
+										"reactions",
+										":emoji_name"
+									],
+									"query": [
+										{
+											"key": "after",
+											"value": "<string,null>"
+										},
+										{
+											"key": "limit",
+											"value": "<integer,null>"
+										}
+									],
+									"variable": [
+										{
+											"key": "channel_id"
+										},
+										{
+											"key": "message_id"
+										},
+										{
+											"key": "emoji_name"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n\t{\n\t\t\"id\": \"<string>\",\n\t\t\"username\": \"<string>\",\n\t\t\"discriminator\": \"<string>\",\n\t\t\"public_flags\": \"<integer>\",\n\t\t\"flags\": \"<integer>\",\n\t\t\"avatar\": \"<string,null>\",\n\t\t\"bot\": \"<boolean,null>\",\n\t\t\"system\": \"<boolean,null>\",\n\t\t\"banner\": \"<string,null>\",\n\t\t\"accent_color\": \"<integer,null>\"\n\t},\n\t{\n\t\t\"id\": \"<string>\",\n\t\t\"username\": \"<string>\",\n\t\t\"discriminator\": \"<string>\",\n\t\t\"public_flags\": \"<integer>\",\n\t\t\"flags\": \"<integer>\",\n\t\t\"avatar\": \"<string,null>\",\n\t\t\"bot\": \"<boolean,null>\",\n\t\t\"system\": \"<boolean,null>\",\n\t\t\"banner\": \"<string,null>\",\n\t\t\"accent_color\": \"<integer,null>\"\n\t}\n]"
+						},
+						{
+							"name": "Client error response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/channels/:channel_id/messages/:message_id/reactions/:emoji_name?after=<string,null>&limit=<integer,null>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"channels",
+										":channel_id",
+										"messages",
+										":message_id",
+										"reactions",
+										":emoji_name"
+									],
+									"query": [
+										{
+											"key": "after",
+											"value": "<string,null>"
+										},
+										{
+											"key": "limit",
+											"value": "<integer,null>"
+										}
+									],
+									"variable": [
+										{
+											"key": "channel_id"
+										},
+										{
+											"key": "message_id"
+										},
+										{
+											"key": "emoji_name"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"code\": \"<integer>\",\n\t\"message\": \"<string>\",\n\t\"errors\": {\n\t\t\"id__\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"mollit_c3d\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"cupidatatf2e\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"eiusmod5b3\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t}\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "delete all message reactions by emoji",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/channels/:channel_id/messages/:message_id/reactions/:emoji_name",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"channels",
+								":channel_id",
+								"messages",
+								":message_id",
+								"reactions",
+								":emoji_name"
+							],
+							"variable": [
+								{
+									"key": "channel_id",
+									"value": "<string>"
+								},
+								{
+									"key": "message_id",
+									"value": "<string>"
+								},
+								{
+									"key": "emoji_name",
+									"value": "<string>"
+								}
+							]
+						},
+						"description": "Remove all reactions on the message for a given emoji"
+					},
+					"response": [
+						{
+							"name": "204 response for delete_all_message_reactions_by_emoji",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/channels/:channel_id/messages/:message_id/reactions/:emoji_name",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"channels",
+										":channel_id",
+										"messages",
+										":message_id",
+										"reactions",
+										":emoji_name"
+									],
+									"variable": [
+										{
+											"key": "channel_id"
+										},
+										{
+											"key": "message_id"
+										},
+										{
+											"key": "emoji_name"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Client error response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/channels/:channel_id/messages/:message_id/reactions/:emoji_name",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"channels",
+										":channel_id",
+										"messages",
+										":message_id",
+										"reactions",
+										":emoji_name"
+									],
+									"variable": [
+										{
+											"key": "channel_id"
+										},
+										{
+											"key": "message_id"
+										},
+										{
+											"key": "emoji_name"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"code\": \"<integer>\",\n\t\"message\": \"<string>\",\n\t\"errors\": {\n\t\t\"id__\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"mollit_c3d\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"cupidatatf2e\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"eiusmod5b3\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t}\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "get guild emoji",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/guilds/:guild_id/emojis/:emoji_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"guilds",
+								":guild_id",
+								"emojis",
+								":emoji_id"
+							],
+							"variable": [
+								{
+									"key": "guild_id",
+									"value": "<string>"
+								},
+								{
+									"key": "emoji_id",
+									"value": "<string>"
+								}
+							]
+						},
+						"description": "Retrieve an [emoji](https://discord.com/developers/docs/resources/emoji#emoji-object) in a guild"
+					},
+					"response": [
+						{
+							"name": "200 response for get_guild_emoji",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/guilds/:guild_id/emojis/:emoji_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"guilds",
+										":guild_id",
+										"emojis",
+										":emoji_id"
+									],
+									"variable": [
+										{
+											"key": "guild_id"
+										},
+										{
+											"key": "emoji_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"id\": \"<string>\",\n\t\"name\": \"<string>\",\n\t\"roles\": [\n\t\t\"<string>\",\n\t\t\"<string>\"\n\t],\n\t\"require_colons\": \"<boolean>\",\n\t\"managed\": \"<boolean>\",\n\t\"animated\": \"<boolean>\",\n\t\"available\": \"<boolean>\",\n\t\"user\": \"<null>\"\n}"
+						},
+						{
+							"name": "Client error response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/guilds/:guild_id/emojis/:emoji_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"guilds",
+										":guild_id",
+										"emojis",
+										":emoji_id"
+									],
+									"variable": [
+										{
+											"key": "guild_id"
+										},
+										{
+											"key": "emoji_id"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"code\": \"<integer>\",\n\t\"message\": \"<string>\",\n\t\"errors\": {\n\t\t\"id__\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"mollit_c3d\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"cupidatatf2e\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"eiusmod5b3\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t}\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "delete guild emoji",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/guilds/:guild_id/emojis/:emoji_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"guilds",
+								":guild_id",
+								"emojis",
+								":emoji_id"
+							],
+							"variable": [
+								{
+									"key": "guild_id",
+									"value": "<string>"
+								},
+								{
+									"key": "emoji_id",
+									"value": "<string>"
+								}
+							]
+						},
+						"description": "Delete an emoji from a guild"
+					},
+					"response": [
+						{
+							"name": "204 response for delete_guild_emoji",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/guilds/:guild_id/emojis/:emoji_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"guilds",
+										":guild_id",
+										"emojis",
+										":emoji_id"
+									],
+									"variable": [
+										{
+											"key": "guild_id"
+										},
+										{
+											"key": "emoji_id"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Client error response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/guilds/:guild_id/emojis/:emoji_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"guilds",
+										":guild_id",
+										"emojis",
+										":emoji_id"
+									],
+									"variable": [
+										{
+											"key": "guild_id"
+										},
+										{
+											"key": "emoji_id"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"code\": \"<integer>\",\n\t\"message\": \"<string>\",\n\t\"errors\": {\n\t\t\"id__\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"mollit_c3d\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"cupidatatf2e\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"eiusmod5b3\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t}\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "update guild emoji",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"<string>\",\n\t\"roles\": [\n\t\t\"<string,null>\",\n\t\t\"<string,null>\"\n\t]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/guilds/:guild_id/emojis/:emoji_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"guilds",
+								":guild_id",
+								"emojis",
+								":emoji_id"
+							],
+							"variable": [
+								{
+									"key": "guild_id",
+									"value": "<string>"
+								},
+								{
+									"key": "emoji_id",
+									"value": "<string>"
+								}
+							]
+						},
+						"description": "Update an emoji's metadata in a guild"
+					},
+					"response": [
+						{
+							"name": "200 response for update_guild_emoji",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"<string>\",\n\t\"roles\": [\n\t\t\"<string,null>\",\n\t\t\"<string,null>\"\n\t]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/guilds/:guild_id/emojis/:emoji_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"guilds",
+										":guild_id",
+										"emojis",
+										":emoji_id"
+									],
+									"variable": [
+										{
+											"key": "guild_id"
+										},
+										{
+											"key": "emoji_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"id\": \"<string>\",\n\t\"name\": \"<string>\",\n\t\"roles\": [\n\t\t\"<string>\",\n\t\t\"<string>\"\n\t],\n\t\"require_colons\": \"<boolean>\",\n\t\"managed\": \"<boolean>\",\n\t\"animated\": \"<boolean>\",\n\t\"available\": \"<boolean>\",\n\t\"user\": \"<null>\"\n}"
+						},
+						{
+							"name": "Client error response",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"<string>\",\n\t\"roles\": [\n\t\t\"<string,null>\",\n\t\t\"<string,null>\"\n\t]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/guilds/:guild_id/emojis/:emoji_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"guilds",
+										":guild_id",
+										"emojis",
+										":emoji_id"
+									],
+									"variable": [
+										{
+											"key": "guild_id"
+										},
+										{
+											"key": "emoji_id"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"code\": \"<integer>\",\n\t\"message\": \"<string>\",\n\t\"errors\": {\n\t\t\"id__\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"mollit_c3d\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"cupidatatf2e\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"eiusmod5b3\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t}\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "list guild emojis",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/guilds/:guild_id/emojis",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"guilds",
+								":guild_id",
+								"emojis"
+							],
+							"variable": [
+								{
+									"key": "guild_id",
+									"value": "<string>"
+								}
+							]
+						},
+						"description": "List [emojis](https://discord.com/developers/docs/resources/emoji#emoji-object) in a guild"
+					},
+					"response": [
+						{
+							"name": "200 response for list_guild_emojis",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/guilds/:guild_id/emojis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"guilds",
+										":guild_id",
+										"emojis"
+									],
+									"variable": [
+										{
+											"key": "guild_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n\t{\n\t\t\"id\": \"<string>\",\n\t\t\"name\": \"<string>\",\n\t\t\"roles\": [\n\t\t\t\"<string>\",\n\t\t\t\"<string>\"\n\t\t],\n\t\t\"require_colons\": \"<boolean>\",\n\t\t\"managed\": \"<boolean>\",\n\t\t\"animated\": \"<boolean>\",\n\t\t\"available\": \"<boolean>\",\n\t\t\"user\": \"<null>\"\n\t},\n\t{\n\t\t\"id\": \"<string>\",\n\t\t\"name\": \"<string>\",\n\t\t\"roles\": [\n\t\t\t\"<string>\",\n\t\t\t\"<string>\"\n\t\t],\n\t\t\"require_colons\": \"<boolean>\",\n\t\t\"managed\": \"<boolean>\",\n\t\t\"animated\": \"<boolean>\",\n\t\t\"available\": \"<boolean>\",\n\t\t\"user\": \"<null>\"\n\t}\n]"
+						},
+						{
+							"name": "Client error response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/guilds/:guild_id/emojis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"guilds",
+										":guild_id",
+										"emojis"
+									],
+									"variable": [
+										{
+											"key": "guild_id"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"code\": \"<integer>\",\n\t\"message\": \"<string>\",\n\t\"errors\": {\n\t\t\"id__\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"mollit_c3d\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"cupidatatf2e\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"eiusmod5b3\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t}\n\t}\n}"
+						}
+					]
+				},
+				{
+					"name": "create guild emoji",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"<string>\",\n\t\"image\": \"<string>\",\n\t\"roles\": [\n\t\t\"<string,null>\",\n\t\t\"<string,null>\"\n\t]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/guilds/:guild_id/emojis",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"guilds",
+								":guild_id",
+								"emojis"
+							],
+							"variable": [
+								{
+									"key": "guild_id",
+									"value": "<string>"
+								}
+							]
+						},
+						"description": "Add a new [emoji](https://discord.com/developers/docs/resources/emoji#emoji-object) in a guild"
+					},
+					"response": [
+						{
+							"name": "201 response for create_guild_emoji",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"<string>\",\n\t\"image\": \"<string>\",\n\t\"roles\": [\n\t\t\"<string,null>\",\n\t\t\"<string,null>\"\n\t]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/guilds/:guild_id/emojis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"guilds",
+										":guild_id",
+										"emojis"
+									],
+									"variable": [
+										{
+											"key": "guild_id"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"id\": \"<string>\",\n\t\"name\": \"<string>\",\n\t\"roles\": [\n\t\t\"<string>\",\n\t\t\"<string>\"\n\t],\n\t\"require_colons\": \"<boolean>\",\n\t\"managed\": \"<boolean>\",\n\t\"animated\": \"<boolean>\",\n\t\"available\": \"<boolean>\",\n\t\"user\": \"<null>\"\n}"
+						},
+						{
+							"name": "Client error response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "<API Key>",
+										"description": "Added as a part of security scheme: apikey"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"<string>\",\n\t\"image\": \"<string>\",\n\t\"roles\": [\n\t\t\"<string,null>\",\n\t\t\"<string,null>\"\n\t]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/guilds/:guild_id/emojis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"guilds",
+										":guild_id",
+										"emojis"
+									],
+									"variable": [
+										{
+											"key": "guild_id"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"code\": \"<integer>\",\n\t\"message\": \"<string>\",\n\t\"errors\": {\n\t\t\"id__\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"mollit_c3d\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"cupidatatf2e\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t},\n\t\t\"eiusmod5b3\": {\n\t\t\t\"value\": \"<Circular reference to #/components/schemas/ErrorDetails detected>\"\n\t\t}\n\t}\n}"
+						}
+					]
+				}
+			],
+			"description": "Configure custom emoji in a server"
+		}
+	]
+}
