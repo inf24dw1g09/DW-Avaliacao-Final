@@ -3,6 +3,8 @@ Trabalho realizado por Camila Olim, aluna nº 46927
 Para a disciplica de Desenvolvimento WEB I do 1º ano da Licenciatura de Informática  
 Universidade da Maia 2024/2025  
 
+---
+
 A entrega está dividida em 3 partes, organizadas neste repositório em 3 branches adicionais ao main branch. 
 
 ### Parte 1
