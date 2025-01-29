@@ -16,9 +16,18 @@ Universidade da Maia 2024/2025
 ### [Parte 2](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-2)
 
 #### Composta por:
+- API REST
+- 1 Ficheiro _Postman Collection_ - [CosplayAPI.postman_collection](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/CosplayAPI.postman_collection.json)
+- [Documentos de apoio](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-2/Documentos%20de%20apoio)
+- Relatório
 
 ---
 
 ### [Parte 3](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-3)
 
 #### Composta por:
+- API REST
+- 1 Ficheiro _Postman Collection_ - [CosplayAPI.postman_collection](
+- Aplicação Web
+- [Documentos de apoio](
+- Relatório
