@@ -1,5 +1,12 @@
 # Avaliacao-Final
-Trabalho realizado por Camila Olim, aluna nº 46927 do 1º ano da Licenciatura de Informática da Universidade da Maia.
+
+Trabalho realizado por Camila Olim
+
+Aluna nº 46927 do 1º ano da Licenciatura de Informática
+
+Universidade da Maia
+
+
 A entrega está dividida em 3 partes, organizadas neste repositório em 3 branches adicionais ao main branch. 
 Parte 1:
 Composta por:
