@@ -14,7 +14,7 @@ Para este trabalho, foi escolhido o tema _Cosplay_, que é uma atividade na qual
 - API REST
 - 1 Ficheiro _Postman Collection_ - [CosplayAPI.postman_collection](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/CosplayAPI.postman_collection.json)
 - [Documentos de apoio](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-2/Documentos%20de%20apoio)
-- Relatório
+- [Relatório](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-2/Relatorio)
 
 ## Ferramentas/Tecnologias
 - Swagger
