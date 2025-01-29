@@ -22,10 +22,16 @@ Universidade da Maia 2024/2025
 
 ## Relatório
 - Capítulo 1: [Introdução](
-    - 
+    - Introdução
+    - Contextualização do tema
 - Capítulo 2: [Recursos](
-    -
+    - Software/Hardware
 - Capítulo 3: [Elaboração](
-    -
+    - Swagger
+    - Base de dados
+    - Controller Services
+    - Postman
+    - Docker
 - Capítulo 4: [Resultados](
-    -
+    - Resultados
+    - Conclusão
