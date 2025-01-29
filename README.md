@@ -5,10 +5,10 @@ Universidade da Maia 2024/2025
 
 > A entrega está dividida em 3 partes, organizadas neste repositório em 3 branches adicionais ao main branch. 
 
-### Parte 1
+### [Parte 1](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-1)
 
 #### Composta por:
-- 1 Ficheiro PDF;
+- 1 Ficheiro PDF - 
 - 1 Ficheiro _Postman Collection_.
 
 ---
