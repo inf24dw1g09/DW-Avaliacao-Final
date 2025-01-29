@@ -13,8 +13,8 @@ A entrega está dividida em 3 partes, organizadas neste repositório em 3 branch
 
 ##### Composta por:
 
-1 Ficheiro PDF;  
-1 Ficheiro _Postman Collection_.  
+- 1 Ficheiro PDF;  
+- 1 Ficheiro _Postman Collection_.  
 
 ### Parte 2:
 
