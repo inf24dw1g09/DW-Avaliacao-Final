@@ -25,17 +25,18 @@ Para este trabalho, foi escolhido o tema _Cosplay_, que é uma atividade na qual
 
 ## Relatório
 - Capítulo 1: [Introdução](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/Relatorio/C1.md)
-    - Introdução
-    - Contextualização do tema
+    - Grupo
+    - Tema
+    - Objetivos
 - Capítulo 2: [Recursos](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/Relatorio/C2.md)
-    - Software/Hardware
+    - Tecnologias
+    - API
 - Capítulo 3: [Elaboração](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/Relatorio/C3.md)
-    - Swagger
     - Base de dados
-    - Controller Services
-    - Postman
+    - API
+    - Web App
     - Docker
     - Aplicação Web
 - Capítulo 4: [Resultados](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/Relatorio/C4.md)
-    - Resultados
+    - Dificuldades
     - Conclusão
