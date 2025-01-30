@@ -8,8 +8,8 @@ Universidade da Maia 2024/2025
 ### [Parte 1](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-1)
 
 #### Composta por:
-- [DWI_A046927_CamilaOlim_AvaliacaoFinal_Parte1.pdf](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-1/Parte1_Ficheiros/DWI_A046927_CamilaOlim_AvaliacaoFinal_Parte1.pdf);
-- [DiscordAPI-Emojis.postman_collection.json](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-1/Parte1_Ficheiros/DiscordAPI-Emojis.postman_collection.json).
+- [Apresentação](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-1/Parte1_Ficheiros/DWI_A046927_CamilaOlim_AvaliacaoFinal_Parte1.pdf);
+- [DiscordAPI-Emojis.postman_collection](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-1/Parte1_Ficheiros/DiscordAPI-Emojis.postman_collection.json).
 
 ---
 
