@@ -39,5 +39,5 @@ Para este trabalho, foi escolhido o tema _Cosplay_, conforme indicado na [propos
     - Finalização
     - Preparação da Entrega
 - Capítulo 4: [Resultados](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/Relatorio/C4.md)
-    - Resultados
+    - Dificuldades
     - Conclusão
