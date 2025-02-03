@@ -1,0 +1,797 @@
+openapi: 3.0.0
+info:
+  title: CosplayAPI
+  contact:
+    name: A046927-CamilaOlim
+    email: a046927@umaia.pt
+  version: 0.0.1
+servers:
+- url: http://localhost:8080
+  description: My localhost
+  variables:
+    basePath:
+      default: /
+paths:
+  /users:
+    get:
+      tags:
+      - UsersController
+      summary: Retrieve users
+      operationId: retrieveUsers
+      responses:
+        "200":
+          description: Array of user model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Users'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: array
+                xml:
+                  name: Users
+                items:
+                  $ref: '#/components/schemas/Users'
+      x-swagger-router-controller: UsersController
+    post:
+      tags:
+      - UsersController
+      summary: Create user
+      operationId: createUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Users'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Users'
+      responses:
+        "200":
+          description: Create user model instances
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Users'
+      x-swagger-router-controller: UsersController
+  /users/{user_name}:
+    get:
+      tags:
+      - UsersController
+      summary: Retrieve user
+      operationId: retrieveUser
+      parameters:
+      - name: user_name
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Users'
+        "400":
+          description: Bad resquest
+        "404":
+          description: User not found
+      x-swagger-router-controller: UsersController
+    put:
+      tags:
+      - UsersController
+      summary: Update user
+      operationId: updateUser
+      parameters:
+      - name: user_name
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Users'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                description: User PUT success
+                x-content-type: application/json
+        "400":
+          description: Bad resquest
+        "404":
+          description: User not found
+      x-swagger-router-controller: UsersController
+    delete:
+      tags:
+      - UsersController
+      summary: Delete user
+      operationId: deleteUser
+      parameters:
+      - name: user_name
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: No content
+        "404":
+          description: User not found
+      x-swagger-router-controller: UsersController
+  /characters:
+    get:
+      tags:
+      - CharactersController
+      summary: Retrieve characters
+      operationId: retrieveCharacters
+      responses:
+        "200":
+          description: Array of character model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Characters'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: array
+                xml:
+                  name: Characters
+                items:
+                  $ref: '#/components/schemas/Characters'
+      x-swagger-router-controller: CharactersController
+    post:
+      tags:
+      - CharactersController
+      summary: Create character
+      operationId: createCharacter
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Characters'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Characters'
+      responses:
+        "200":
+          description: Create character model instances
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Characters'
+      x-swagger-router-controller: CharactersController
+  /characters/{character_id}:
+    get:
+      tags:
+      - CharactersController
+      summary: Retrieve character
+      operationId: retrieveCharacter
+      parameters:
+      - name: character_id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Characters'
+        "400":
+          description: Bad resquest
+        "404":
+          description: Character not found
+      x-swagger-router-controller: CharactersController
+    put:
+      tags:
+      - CharactersController
+      summary: Update character
+      operationId: updateCharacter
+      parameters:
+      - name: character_id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Characters'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                description: Character PUT success
+                x-content-type: application/json
+        "400":
+          description: Bad resquest
+        "404":
+          description: Character not found
+      x-swagger-router-controller: CharactersController
+    delete:
+      tags:
+      - CharactersController
+      summary: Delete character
+      operationId: deleteCharacter
+      parameters:
+      - name: character_id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: No content
+        "404":
+          description: Character not found
+      x-swagger-router-controller: CharactersController
+  /media:
+    get:
+      tags:
+      - MediaController
+      summary: Retrieve media
+      operationId: retrieveMedias
+      responses:
+        "200":
+          description: Array of media model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Media'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: array
+                xml:
+                  name: Media
+                items:
+                  $ref: '#/components/schemas/Media'
+      x-swagger-router-controller: MediaController
+    post:
+      tags:
+      - MediaController
+      summary: Create media
+      operationId: createMedia
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Media'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Media'
+      responses:
+        "200":
+          description: Create media model instances
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Media'
+      x-swagger-router-controller: MediaController
+  /media/{media_id}:
+    get:
+      tags:
+      - MediaController
+      summary: Retrieve media
+      operationId: retrieveMedia
+      parameters:
+      - name: media_id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Media'
+        "400":
+          description: Bad request
+        "404":
+          description: Media not found
+      x-swagger-router-controller: MediaController
+    put:
+      tags:
+      - MediaController
+      summary: Update media
+      operationId: updateMedia
+      parameters:
+      - name: media_id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Media'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                description: Media PUT success
+                x-content-type: application/json
+        "400":
+          description: Bad resquest
+        "404":
+          description: Media not found
+      x-swagger-router-controller: MediaController
+    delete:
+      tags:
+      - MediaController
+      summary: Delete media
+      operationId: deleteMedia
+      parameters:
+      - name: media_id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: No content
+        "404":
+          description: Media not found
+      x-swagger-router-controller: MediaController
+  /posts:
+    get:
+      tags:
+      - PostsController
+      summary: Retrieve posts
+      operationId: retrievePosts
+      responses:
+        "200":
+          description: Array of posts model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Posts'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: array
+                xml:
+                  name: Posts
+                items:
+                  $ref: '#/components/schemas/Posts'
+      x-swagger-router-controller: PostsController
+    post:
+      tags:
+      - PostsController
+      summary: Create post
+      operationId: createPost
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Posts'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Posts'
+      responses:
+        "200":
+          description: Create post model instances
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Posts'
+      x-swagger-router-controller: PostsController
+  /posts/{post_id}:
+    get:
+      tags:
+      - PostsController
+      summary: Retrieve post
+      operationId: retrievePost
+      parameters:
+      - name: post_id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Posts'
+        "400":
+          description: Bad resquest
+        "404":
+          description: Post not found
+      x-swagger-router-controller: PostsController
+    put:
+      tags:
+      - PostsController
+      summary: Update post
+      operationId: updatePost
+      parameters:
+      - name: post_id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Posts'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                description: Post PUT success
+                x-content-type: application/json
+        "400":
+          description: Bad resquest
+        "404":
+          description: Post not found
+      x-swagger-router-controller: PostsController
+    delete:
+      tags:
+      - PostsController
+      summary: Delete post
+      operationId: deletePost
+      parameters:
+      - name: post_id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: No content
+        "404":
+          description: Post not found
+      x-swagger-router-controller: PostsController
+  /comments:
+    get:
+      tags:
+      - CommentsController
+      summary: Retrieve comments
+      operationId: retrieveComments
+      responses:
+        "200":
+          description: Array of comments model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Comments'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: array
+                xml:
+                  name: Comments
+                items:
+                  $ref: '#/components/schemas/Comments'
+      x-swagger-router-controller: CommentsController
+    post:
+      tags:
+      - CommentsController
+      summary: Create comment
+      operationId: createComment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Comments'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Comments'
+      responses:
+        "200":
+          description: Create comment model instances
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Comments'
+      x-swagger-router-controller: CommentsController
+  /comments/{comment_id}:
+    get:
+      tags:
+      - CommentsController
+      summary: Retrieve comment
+      operationId: retrieveComment
+      parameters:
+      - name: comment_id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Comments'
+        "400":
+          description: Bad resquest
+        "404":
+          description: Comment not found
+      x-swagger-router-controller: CommentsController
+    put:
+      tags:
+      - CommentsController
+      summary: Update comment
+      operationId: updateComment
+      parameters:
+      - name: comment_id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Comments'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                description: Comment PUT success
+                x-content-type: application/json
+        "400":
+          description: Bad resquest
+        "404":
+          description: Comment not found
+      x-swagger-router-controller: CommentsController
+    delete:
+      tags:
+      - CommentsController
+      summary: Delete comment
+      operationId: deleteComment
+      parameters:
+      - name: comment_id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: No content
+        "404":
+          description: Comment not found
+      x-swagger-router-controller: CommentsController
+components:
+  schemas:
+    Users:
+      title: Users
+      required:
+      - nickname
+      - password
+      type: object
+      properties:
+        user_name:
+          type: string
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+          format: password
+        nickname:
+          type: string
+      additionalProperties: false
+      example:
+        password: "0000"
+        user_name: user_name
+        nickname: nickname
+        email: "name@example.com"
+    Characters:
+      required:
+      - media
+      - name
+      type: object
+      properties:
+        character_id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        media:
+          type: integer
+          format: int64
+        description:
+          type: string
+      additionalProperties: false
+      example:
+        name: name
+        media: 1
+        description: description
+    Media:
+      required:
+      - name
+      - type
+      type: object
+      properties:
+        media_id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        type:
+          type: integer
+          format: int64
+      additionalProperties: false
+      example:
+        name: name
+        type: 0
+    Posts:
+      required:
+      - characters
+      - cosplayers
+      - photographer
+      - title
+      type: object
+      properties:
+        post_id:
+          type: integer
+          format: int64
+        title:
+          type: string
+        date:
+          type: string
+          format: date-time
+        cosplayers:
+          type: array
+          items:
+            type: string
+        photographer:
+          type: string
+        characters:
+          type: array
+          items:
+            type: integer
+            format: int64
+        message:
+          type: string
+      additionalProperties: false
+      example:
+        title: title
+        cosplayers:
+        - user_name
+        - user_name        
+        characters:
+        - 1
+        - 2
+        photographer: user_name
+        message: message
+    Comments:
+      required:
+      - message
+      - post
+      - user
+      type: object
+      properties:
+        comment_id:
+          type: integer
+          format: int64
+        post:
+          type: integer
+          format: int64
+        user:
+          type: string
+        date:
+          type: string
+          format: date-time
+        message:
+          type: string
+      additionalProperties: false
+      example:
+        post: 6
+        message: message
+        user: user_name
+  examples:
+    UserExample:
+      value:
+        user_name: Anne1234
+        email: annie@gmail.com
+        password: Hello1234
+        nickname: Annie
+    CharacterExample:
+      value:
+        character_id: 1
+        name: Pikachu
+        media: Pokemon
+        description: A yellow eletric tipe pokemon
+    MediaExample:
+      value:
+        media_id: 1
+        name: Pokemon
+        type: Video-Game; Anime.
+    PostExample:
+      value:
+        post_id: 1
+        title: Pokemon cosplay group
+        cosplayers: Annie; Joe; Patty.
+        photographer: Mike
+        characters: Jessie; James; Mewth.
+        message: Team Rocket strikes again! Don't miss out on our new photo <3
+    CommentExample:
+      value:
+        comment_id: 1
+        post: 1
+        user: 1
+        message: "Wow, I love your cosplays! Great job!"
