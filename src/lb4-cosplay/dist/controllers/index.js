@@ -1,0 +1,23 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+tslib_1.__exportStar(require("./ping.controller"), exports);
+tslib_1.__exportStar(require("./users.controller"), exports);
+tslib_1.__exportStar(require("./characters.controller"), exports);
+tslib_1.__exportStar(require("./medias.controller"), exports);
+tslib_1.__exportStar(require("./types.controller"), exports);
+tslib_1.__exportStar(require("./posts.controller"), exports);
+tslib_1.__exportStar(require("./comments.controller"), exports);
+tslib_1.__exportStar(require("./types-medias.controller"), exports);
+tslib_1.__exportStar(require("./medias-types.controller"), exports);
+tslib_1.__exportStar(require("./medias-characters.controller"), exports);
+tslib_1.__exportStar(require("./characters-medias.controller"), exports);
+tslib_1.__exportStar(require("./users-posts.controller"), exports);
+tslib_1.__exportStar(require("./posts-users.controller"), exports);
+tslib_1.__exportStar(require("./characters-posts.controller"), exports);
+tslib_1.__exportStar(require("./posts-characters.controller"), exports);
+tslib_1.__exportStar(require("./posts-comments.controller"), exports);
+tslib_1.__exportStar(require("./comments-posts.controller"), exports);
+tslib_1.__exportStar(require("./users-comments.controller"), exports);
+tslib_1.__exportStar(require("./comments-users.controller"), exports);
+//# sourceMappingURL=index.js.map
