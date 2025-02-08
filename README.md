@@ -13,30 +13,33 @@ Para este trabalho, foi escolhido o tema _Cosplay_, que é uma atividade na qual
 ## Conteúdos
 - [API REST](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-3/Parte3_Ficheiros/lb4-cosplay)
 - [Aplicação Web](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-3/Parte3_Ficheiros/lb4-cosplay/cosplay-create_react_app)
+- [Base de Dados](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-3/src/db_backup.sql)
 - [Documentos de apoio](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-3/Documentos%20de%20apoio)
 - [Relatório](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-3/Relatorio)
 
 ## Ferramentas/Tecnologias
-- Swagger
-- NodeJs
+- Visual Studio Code
+- Loopback4
 - MySQL
+- Swagger
+- React Admin
 - Docker
 - Postman
 
 ## Relatório
-- Capítulo 1: [Introdução](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/Relatorio/C1.md)
+- Capítulo 1: [Introdução](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-3/Relatorio/C1.md)
     - Grupo
     - Tema
     - Objetivos
-- Capítulo 2: [Recursos](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/Relatorio/C2.md)
+- Capítulo 2: [Recursos](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-3/Relatorio/C2.md)
     - Tecnologias
     - API
-- Capítulo 3: [Elaboração](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/Relatorio/C3.md)
+- Capítulo 3: [Elaboração](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-3/Relatorio/C3.md)
     - Base de dados
     - API
     - Web App
     - Docker
     - Aplicação Web
-- Capítulo 4: [Resultados](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/Relatorio/C4.md)
+- Capítulo 4: [Resultados](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-3/Relatorio/C4.md)
     - Dificuldades
     - Conclusão
