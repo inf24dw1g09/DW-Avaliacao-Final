@@ -19,6 +19,7 @@ import {
 } from '@loopback/rest';
 import {Users} from '../models';
 import {UsersRepository} from '../repositories';
+import { use } from 'should';
 
 export class UsersController {
   constructor(
@@ -137,8 +138,9 @@ export class UsersController {
   async replaceById(
     @param.path.number('id') id: number,
     @requestBody() users: Users,
-  ): Promise<void> {
+  ): Promise<Users> {
     await this.usersRepository.replaceById(id, users);
+    return users;
   }
 
   @del('/users/{id}')

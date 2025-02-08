@@ -136,8 +136,9 @@ export class CharactersController {
   async replaceById(
     @param.path.number('id') id: number,
     @requestBody() characters: Characters,
-  ): Promise<void> {
-    await this.charactersRepository.replaceById(id, characters);
+  ): Promise<Characters> {
+      await this.charactersRepository.replaceById(id, characters);
+      return characters;
   }
 
   @del('/characters/{id}')

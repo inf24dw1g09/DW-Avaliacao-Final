@@ -1,5 +1,5 @@
 # Check out https://hub.docker.com/_/node to select a new base image
-FROM docker.io/library/node:18-slim
+FROM docker.io/library/node:latest
 
 # Set to a non-root built-in user `node`
 USER node
@@ -14,7 +14,7 @@ WORKDIR /home/node/app
 # where available (npm@5+)
 COPY --chown=node package*.json ./
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 # Bundle app source code
 COPY --chown=node . .

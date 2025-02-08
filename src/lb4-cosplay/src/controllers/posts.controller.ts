@@ -136,8 +136,9 @@ export class PostsController {
   async replaceById(
     @param.path.number('id') id: number,
     @requestBody() posts: Posts,
-  ): Promise<void> {
-    await this.postsRepository.replaceById(id, posts);
+  ): Promise<Posts> {
+      await this.postsRepository.replaceById(id, posts);
+      return posts;
   }
 
   @del('/posts/{id}')

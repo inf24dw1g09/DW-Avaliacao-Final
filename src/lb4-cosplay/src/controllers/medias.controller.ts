@@ -136,8 +136,9 @@ export class MediasController {
   async replaceById(
     @param.path.number('id') id: number,
     @requestBody() medias: Medias,
-  ): Promise<void> {
-    await this.mediasRepository.replaceById(id, medias);
+  ): Promise<Medias> {
+      await this.mediasRepository.replaceById(id, medias);
+      return medias;
   }
 
   @del('/medias/{id}')

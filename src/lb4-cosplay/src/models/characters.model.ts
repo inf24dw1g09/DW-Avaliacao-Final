@@ -16,10 +16,12 @@ export class Characters extends Entity {
     required: true,
   })
   name: string;
+  
   @property({
     type: 'string',
+    required: true,
   })
-  description?: string;
+  description: string;
 
   @belongsTo(() => Medias, {name: 'media_character'})
   media_id: number;
