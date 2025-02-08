@@ -14,7 +14,7 @@ Para este trabalho, foi escolhido o tema _Cosplay_, conforme indicado na [propos
 - [API REST](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-2/src)
 - [Base de Dados](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/db/db.sql)
 - [Docker Compose](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/docker-compose.yml)
-- [CosplayAPI.postman_collection](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/CosplayAPI.postman_collection.json)
+- [Coleção do Postman](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/CosplayAPI.postman_collection.json)
 - [Documentos de apoio](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-2/Documentos%20de%20apoio)
 - [Relatório](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-2/Relatorio)
 
