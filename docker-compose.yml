@@ -1,0 +1,41 @@
+services:
+    ### MySQL Container
+    db:
+        build: ./src/db/.
+        healthcheck:
+            test: mysqladmin ping -h localhost -p1234
+            interval: 10s
+            timeout: 3s
+            retries: 100
+            start_period: 0s
+        # image: camilaolim/p3_db:latest
+    lb4:
+        depends_on:
+            db:
+                condition: service_healthy
+        build: ./src/lb4-cosplay/.
+        ports:
+            - "3000:3000"
+        command: npm run start
+        restart: on-failure
+        environment:
+            DB_HOST: db
+        # image: camilaolim/p3_api:latest
+
+    react_app:
+        depends_on:
+            - lb4
+        build: ./src/cosplay-create_react_app/.
+        ports:
+            - "3006:3006"
+        command: npm run start
+        restart: on-failure
+        environment:
+            DB_HOST: lb4
+        # image: camilaolim/p3_app0:latest
+#         networks:
+#           - internalnet
+
+# networks:
+#     internalnet:
+#         driver: bridge
