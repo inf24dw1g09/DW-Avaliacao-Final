@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "ajv": "^8.17.1",
     "ajv-keywords": "^5.1.0",
+    "dotenv": "^16.4.7",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-admin": "^5.5.3",
@@ -17,6 +18,7 @@
     "typescript": "^5.7.3",
     "web-vitals": "^2.1.4"
   },
+  
   "scripts": {
     "start": "set PORT=3006 && react-scripts start",
     "build": "react-scripts build",
@@ -30,6 +32,7 @@
     ]
   },
   "browserslist": {
+    "dotenv": false,
     "production": [
       ">0.2%",
       "not dead",
