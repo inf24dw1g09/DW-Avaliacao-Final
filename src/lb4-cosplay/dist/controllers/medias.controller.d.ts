@@ -10,6 +10,6 @@ export declare class MediasController {
     updateAll(medias: Medias, where?: Where<Medias>): Promise<Count>;
     findById(id: number): Promise<Medias>;
     updateById(id: number, medias: Medias): Promise<void>;
-    replaceById(id: number, medias: Medias): Promise<void>;
+    replaceById(id: number, medias: Medias): Promise<Medias>;
     deleteById(id: number): Promise<void>;
 }

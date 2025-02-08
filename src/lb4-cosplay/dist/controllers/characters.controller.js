@@ -32,6 +32,7 @@ let CharactersController = class CharactersController {
     }
     async replaceById(id, characters) {
         await this.charactersRepository.replaceById(id, characters);
+        return characters;
     }
     async deleteById(id) {
         await this.charactersRepository.deleteById(id);

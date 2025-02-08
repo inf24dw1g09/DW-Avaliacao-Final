@@ -10,6 +10,6 @@ export declare class CharactersController {
     updateAll(characters: Characters, where?: Where<Characters>): Promise<Count>;
     findById(id: number): Promise<Characters>;
     updateById(id: number, characters: Characters): Promise<void>;
-    replaceById(id: number, characters: Characters): Promise<void>;
+    replaceById(id: number, characters: Characters): Promise<Characters>;
     deleteById(id: number): Promise<void>;
 }
