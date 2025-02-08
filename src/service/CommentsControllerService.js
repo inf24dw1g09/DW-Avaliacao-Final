@@ -11,7 +11,7 @@ exports.createComment = function(body) {
   return new Promise(function(resolve, reject) {
     console.log(body);
     sql.query(
-      "INSERT INTO Comment (post_id, user_name, message, date) Values(?,?,?,?)", 
+      "INSERT INTO COMMENT (post_id, user_name, message, date) Values(?,?,?,?)", 
       [body.post, body.user, body.message, new Date()], 
       function(err,res){
         if (err) {
@@ -42,7 +42,7 @@ exports.createComment = function(body) {
 exports.deleteComment = function(comment_id) {
   return new Promise(function(resolve, reject) {
     sql.query(
-      "DELETE FROM Comment WHERE comment_id = ?", 
+      "DELETE FROM COMMENT WHERE comment_id = ?", 
       [comment_id], 
       function(err,res){
         if (err || !res.affectedRows) {
@@ -69,8 +69,8 @@ exports.deleteComment = function(comment_id) {
 exports.retrieveComment = function(comment_id) {
   return new Promise(function(resolve, reject) {
     sql.query(
-      `SELECT Post.title as Post, Comment.user_name as User, Comment.message as Comment, Comment.date as Date 
-      FROM Comment INNER JOIN Post ON Post.post_id = Comment.post_id WHERE Comment.comment_id = ?`, 
+      `SELECT POST.title as Post, COMMENT.user_name as User, COMMENT.message as Comment, COMMENT.date as Date 
+      FROM COMMENT INNER JOIN POST ON POST.post_id = COMMENT.post_id WHERE COMMENT.comment_id = ?`, 
       [comment_id], 
       function(err,res){
         if (res.length == 0)
@@ -99,8 +99,8 @@ exports.retrieveComment = function(comment_id) {
 exports.retrieveComments = function() {
   return new Promise(function(resolve, reject) {
     sql.query(
-      `SELECT Comment.comment_id as Id, Post.title as Post, Comment.message as Comment, Comment.date as Date FROM Comment
-      INNER JOIN Post ON Post.post_id = Comment.post_id`, 
+      `SELECT COMMENT.comment_id as Id, POST.title as Post, COMMENT.message as Comment, COMMENT.date as Date FROM COMMENT
+      INNER JOIN POST ON POST.post_id = COMMENT.post_id`, 
       function(err,res){
         if (err) {
           console.log(err);
@@ -126,7 +126,7 @@ exports.updateComment = function(body,comment_id) {
   return new Promise(function(resolve, reject) {
     console.log(body);
     sql.query(
-      "UPDATE Comment set message = ? WHERE comment_id = ?", 
+      "UPDATE COMMENT set message = ? WHERE comment_id = ?", 
       [body.message, comment_id], 
       function(err,res){
         if (err) {

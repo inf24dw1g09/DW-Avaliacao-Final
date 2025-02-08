@@ -4,14 +4,14 @@ var sql = require('../db.js');
 /**
  * Create media
  *
- * body Media  (optional)
- * returns Media
+ * body MEDIA  (optional)
+ * returns MEDIA
  **/
 exports.createMedia = function (body) {
   return new Promise(function (resolve, reject) {
     console.log(body);
     sql.query(
-      "INSERT INTO Media (name) Values(?)",
+      "INSERT INTO MEDIA (name) Values(?)",
       [body.name, body.type],
       function (err, res) {
         if (err) {
@@ -20,7 +20,7 @@ exports.createMedia = function (body) {
         }
         else {
           sql.query(
-            "INSERT INTO Media_Type (type_id, media_id) Values(?,?)",
+            "INSERT INTO MEDIA_TYPE (type_id, media_id) Values(?,?)",
             [body.type, res.insertId],
             function (err, res) {
               if (err) {
@@ -47,7 +47,7 @@ exports.createMedia = function (body) {
 exports.deleteMedia = function (media_id) {
   return new Promise(function (resolve, reject) {
     sql.query(
-      "DELETE FROM Media WHERE media_id = ?",
+      "DELETE FROM MEDIA WHERE media_id = ?",
       [media_id],
       function (err, res) {
         if (err || !res.affectedRows) {
@@ -69,17 +69,17 @@ exports.deleteMedia = function (media_id) {
  * Retrieve media
  *
  * media_id Long 
- * returns Media
+ * returns MEDIA
  **/
 exports.retrieveMedia = function (media_id) {
   return new Promise(function (resolve, reject) {
     sql.query(
-      `SELECT Media.name as Name, Types.name as Type, Characters.name as Characters FROM Media 
-      INNER JOIN Media_Type ON Media.media_id = Media_Type.media_id 
-      INNER JOIN Types ON Types.type_id = Media_Type.type_id 
-      LEFT JOIN Character_Media ON Media.media_id = Character_Media.media_id 
-      LEFT JOIN Characters ON Characters.character_id = Character_Media.character_id 
-      WHERE Media.media_id = ?`,
+      `SELECT MEDIA.name as Name, TYPES.name as Type, CHARACTERS.name as Characters FROM MEDIA 
+      INNER JOIN MEDIA_TYPE ON MEDIA.media_id = MEDIA_TYPE.media_id 
+      INNER JOIN TYPES ON TYPES.type_id = MEDIA_TYPE.type_id 
+      LEFT JOIN CHARACTER_MEDIA ON MEDIA.media_id = CHARACTER_MEDIA.media_id 
+      LEFT JOIN CHARACTERS ON CHARACTERS.character_id = CHARACTER_MEDIA.character_id 
+      WHERE MEDIA.media_id = ?`,
       [media_id],
       function (err, res) {
         if (res.length == 0)
@@ -117,9 +117,9 @@ exports.retrieveMedia = function (media_id) {
 exports.retrieveMedias = function () {
   return new Promise(function (resolve, reject) {
     sql.query(
-      `SELECT Media.media_id as Id, Media.name as Name, Types.name as Type FROM Media 
-      INNER JOIN Media_Type ON Media.media_id = Media_Type.media_id 
-      INNER JOIN Types ON Types.type_id = Media_Type.type_id`,
+      `SELECT MEDIA.media_id as Id, MEDIA.name as Name, TYPES.name as Type FROM MEDIA 
+      INNER JOIN MEDIA_TYPE ON MEDIA.media_id = MEDIA_TYPE.media_id 
+      INNER JOIN TYPES ON TYPES.type_id = MEDIA_TYPE.type_id`,
       function (err, res) {
         if (err) {
           console.log(err);
@@ -137,7 +137,7 @@ exports.retrieveMedias = function () {
 /**
  * Update media
  *
- * body Media 
+ * body MEDIA 
  * media_id Long 
  * no response value expected for this operation
  **/
@@ -145,7 +145,7 @@ exports.updateMedia = function (body, media_id) {
   return new Promise(function (resolve, reject) {
     console.log(body);
     sql.query(
-      "UPDATE Media set name = ? WHERE media_id = ?",
+      "UPDATE MEDIA set name = ? WHERE media_id = ?",
       [body.name, media_id],
       function (err, res) {
         if (err) {

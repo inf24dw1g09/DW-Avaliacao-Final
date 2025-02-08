@@ -4,14 +4,14 @@ var sql = require('../db.js');
 /**
  * Create user
  *
- * body Users  (optional)
- * returns Users
+ * body USERS  (optional)
+ * returns USERS
  **/
 exports.createUser = function (body) {
   return new Promise(function (resolve, reject) {
     console.log(body);
     sql.query(
-      "INSERT INTO Users (user_name, email, password, nickname) Values(?,?,?,?)",
+      "INSERT INTO USERS (user_name, email, password, nickname) Values(?,?,?,?)",
       [body.user_name, body.email, body.password, body.nickname],
       function (err, res) {
         if (err) {
@@ -41,7 +41,7 @@ exports.createUser = function (body) {
 exports.deleteUser = function (user_name) {
   return new Promise(function (resolve, reject) {
     sql.query(
-      "DELETE FROM Users WHERE user_name = ?",
+      "DELETE FROM USERS WHERE user_name = ?",
       [user_name],
       function (err, res) {
         if (err || !res.affectedRows) {
@@ -62,15 +62,15 @@ exports.deleteUser = function (user_name) {
  * Retrieve user
  *
  * user_name String 
- * returns Users
+ * returns USERS
  **/
 exports.retrieveUser = function (user_name) {
   return new Promise(function (resolve, reject) {
     sql.query(
-      `SELECT Users.nickname as nickname, Post.title as Posts, Post.date FROM Users 
-      LEFT JOIN Cosplay_in_Post ON Users.user_name = Cosplay_in_Post.user_name 
-      LEFT JOIN Post ON Post.post_id = Cosplay_in_Post.post_id 
-      WHERE Users.user_name = ?`,
+      `SELECT USERS.nickname as nickname, POST.title as Posts, POST.date FROM USERS 
+      LEFT JOIN COSPLAY_IN_POST ON USERS.user_name = COSPLAY_IN_POST.user_name 
+      LEFT JOIN POST ON POST.post_id = COSPLAY_IN_POST.post_id 
+      WHERE USERS.user_name = ?`,
       [user_name],
       function (err, res) {
         if (err) {
@@ -107,7 +107,7 @@ exports.retrieveUser = function (user_name) {
 exports.retrieveUsers = function () {
   return new Promise(function (resolve, reject) {
     sql.query(
-      "SELECT Users.user_name as Username, Users.nickname as Nickname FROM Users",
+      "SELECT USERS.user_name as Username, USERS.nickname as Nickname FROM USERS",
       function (err, res) {
         if (err) {
           console.log(err);
@@ -124,7 +124,7 @@ exports.retrieveUsers = function () {
 /**
  * Update user
  *
- * body Users 
+ * body USERS 
  * user_name String 
  * no response value expected for this operation
  **/
@@ -132,7 +132,7 @@ exports.updateUser = function (body, user_name) {
   return new Promise(function (resolve, reject) {
     console.log(body);
     sql.query(
-      "UPDATE Users set password = ?, nickname = ? WHERE user_name = ?",
+      "UPDATE USERS set password = ?, nickname = ? WHERE user_name = ?",
       [body.password, body.nickname, user_name],
       function (err, res) {
         if (err) {

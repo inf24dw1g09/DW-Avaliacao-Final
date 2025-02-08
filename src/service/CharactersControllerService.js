@@ -4,15 +4,15 @@ var sql = require('../db.js');
 /**
  * Create character
  *
- * body Characters  (optional)
- * returns Characters
+ * body CHARACTERS  (optional)
+ * returns CHARACTERS
  **/
 
 exports.createCharacter = function (body) {
   return new Promise(function (resolve, reject) {
     console.log(body);
     sql.query(
-      "INSERT INTO Characters (name, description) Values(?,?)",
+      "INSERT INTO CHARACTERS (name, description) Values(?,?)",
       [body.name, body.description],
       function (err, res) {
         if (err) {
@@ -21,7 +21,7 @@ exports.createCharacter = function (body) {
         }
         else {
           sql.query(
-            "INSERT INTO Character_Media (media_id, character_id) Values(?,?)",
+            "INSERT INTO CHARACTER_MEDIA (media_id, character_id) Values(?,?)",
             [body.media, res.insertId],
             function (err, res) {
               if (err) {
@@ -48,7 +48,7 @@ exports.createCharacter = function (body) {
 exports.deleteCharacter = function (character_id) {
   return new Promise(function (resolve, reject) {
     sql.query(
-      "DELETE FROM Characters WHERE character_id = ?",
+      "DELETE FROM CHARACTERS WHERE character_id = ?",
       [character_id],
       function (err, res) {
         if (err || !res.affectedRows) {
@@ -70,14 +70,14 @@ exports.deleteCharacter = function (character_id) {
  * Retrieve character
  *
  * character_id Long 
- * returns Characters
+ * returns CHARACTERS
  **/
 exports.retrieveCharacter = function (character_id) {
   return new Promise(function (resolve, reject) {
     sql.query(
-      `SELECT Characters.name as Name, Media.name as Media, Characters.description as Description FROM Characters 
-      INNER JOIN Character_Media ON Characters.character_id = Character_Media.character_id 
-      INNER JOIN Media ON Media.media_id = Character_Media.media_id WHERE Characters.character_id = ?`,
+      `SELECT CHARACTERS.name as Name, MEDIA.name as Media, CHARACTERS.description as Description FROM CHARACTERS 
+      INNER JOIN CHARACTER_MEDIA ON CHARACTERS.character_id = CHARACTER_MEDIA.character_id 
+      INNER JOIN MEDIA ON MEDIA.media_id = CHARACTER_MEDIA.media_id WHERE CHARACTERS.character_id = ?`,
       [character_id],
       function (err, res) {
         if (res.length == 0)
@@ -106,9 +106,9 @@ exports.retrieveCharacter = function (character_id) {
 exports.retrieveCharacters = function () {
   return new Promise(function (resolve, reject) {
     sql.query(
-      `SELECT Characters.character_id as Id, Characters.name as Name, Media.name as Media FROM Characters 
-      INNER JOIN Character_Media ON Characters.character_id = Character_Media.character_id 
-      INNER JOIN Media ON Media.media_id = Character_Media.media_id`,
+      `SELECT CHARACTERS.character_id as Id, CHARACTERS.name as Name, MEDIA.name as Media FROM CHARACTERS 
+      INNER JOIN CHARACTER_MEDIA ON CHARACTERS.character_id = CHARACTER_MEDIA.character_id 
+      INNER JOIN MEDIA ON MEDIA.media_id = CHARACTER_MEDIA.media_id`,
       function (err, res) {
         if (err) {
           console.log(err);
@@ -126,7 +126,7 @@ exports.retrieveCharacters = function () {
 /**
  * Update character
  *
- * body Characters 
+ * body CHARACTERS 
  * character_id Long 
  * no response value expected for this operation
  **/
@@ -134,7 +134,7 @@ exports.updateCharacter = function (body, character_id) {
   return new Promise(function (resolve, reject) {
     console.log(body);
     sql.query(
-      "UPDATE Characters set name = ?, description = ? WHERE character_id = ?",
+      "UPDATE CHARACTERS set name = ?, description = ? WHERE character_id = ?",
       [body.name, body.description, character_id],
       function (err, res) {
         if (err) {

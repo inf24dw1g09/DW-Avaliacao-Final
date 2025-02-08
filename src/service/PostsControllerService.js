@@ -12,7 +12,7 @@ exports.createPost = function (body) {
     console.log(body);
     let date = new Date();
     sql.query(
-      "INSERT INTO Post (title, photographer, description, date) Values(?,?,?,?)",
+      "INSERT INTO POST (title, photographer, description, date) Values(?,?,?,?)",
       [body.title, body.photographer, body.message, date],
       function (err, res) {
         if (err) {
@@ -23,7 +23,7 @@ exports.createPost = function (body) {
           console.log(res);
           for (let i = 0; i < body.characters.length; ++i) {
             sql.query(
-              "INSERT INTO Cosplay_in_Post (post_id, user_name, character_id) Values(?,?,?)",
+              "INSERT INTO COSPLAY_IN_POST (post_id, user_name, character_id) Values(?,?,?)",
               [res.insertId, body.cosplayers[i], body.characters[i]],
               function (err2, res2) {
                 if (err2) {
@@ -57,7 +57,7 @@ exports.createPost = function (body) {
 exports.deletePost = function (post_id) {
   return new Promise(function (resolve, reject) {
     sql.query(
-      "DELETE FROM Post WHERE post_id = ?",
+      "DELETE FROM POST WHERE post_id = ?",
       [post_id],
       function (err, res) {
         if (err || !res.affectedRows) {
@@ -83,13 +83,13 @@ exports.deletePost = function (post_id) {
 exports.retrievePost = function (post_id) {
   return new Promise(function (resolve, reject) {
     sql.query(
-      `SELECT Post.title as Title, Post.date as Date, Users.nickname as Cosplayers, Characters.name as Characters, Post.photographer 
-      as Photographer, Post.description as Description, Comment.comment_id, Comment.user_name as CommentUser, Comment.message 
-      as Comments, Comment.date as CommentDate FROM Post 
-      INNER JOIN Cosplay_in_Post ON Post.post_id = Cosplay_in_Post.post_id 
-      INNER JOIN Users ON Users.user_name = Cosplay_in_Post.user_name 
-      INNER JOIN Characters ON Characters.character_id = Cosplay_in_Post.character_id 
-      LEFT JOIN Comment ON Comment.post_id = Post.post_id WHERE Post.post_id = ?`,
+      `SELECT POST.title as Title, POST.date as Date, USERS.nickname as Cosplayers, CHARACTERS.name as Characters, POST.photographer 
+      as Photographer, POST.description as Description, COMMENT.comment_id, COMMENT.user_name as CommentUser, COMMENT.message 
+      as Comments, COMMENT.date as CommentDate FROM POST 
+      INNER JOIN COSPLAY_IN_POST ON POST.post_id = COSPLAY_IN_POST.post_id 
+      INNER JOIN USERS ON USERS.user_name = COSPLAY_IN_POST.user_name 
+      INNER JOIN CHARACTERS ON CHARACTERS.character_id = COSPLAY_IN_POST.character_id 
+      LEFT JOIN COMMENT ON COMMENT.post_id = POST.post_id WHERE POST.post_id = ?`,
       [post_id],
       function (err, res) {
         if (res.length == 0)
@@ -146,7 +146,7 @@ exports.retrievePost = function (post_id) {
 exports.retrievePosts = function () {
   return new Promise(function (resolve, reject) {
     sql.query(
-      "SELECT Post.post_id as Id, Post.title as Title, Post.date as Date FROM Post",
+      "SELECT POST.post_id as Id, POST.title as Title, POST.date as Date FROM POST",
       function (err, res) {
         if (err) {
           console.log(err);
@@ -172,7 +172,7 @@ exports.updatePost = function (body, post_id) {
   return new Promise(function (resolve, reject) {
     console.log(body);
     sql.query(
-      "UPDATE Post set title = ?, description=? WHERE post_id = ?",
+      "UPDATE POST set title = ?, description=? WHERE post_id = ?",
       [body.title, body.message, post_id],
       function (err, res) {
         if (err) {
