@@ -7,9 +7,9 @@ import { MediaCreate, MediaEdit, MediaList } from './components/medias.tsx';
 import { CharacterCreate, CharacterEdit, CharacterList } from './components/characters.tsx';
 import { PostCreate, PostEdit, PostList } from './components/posts.tsx';
 import { func } from 'prop-types';
-import 'dotenv/config';
+//import 'dotenv/config';
 
-const server = process.env.DB_HOST; 
+//const server = process.env.DB_HOST; 
 
 function dataFormat(response, resource) {
     switch (resource) {
@@ -110,7 +110,7 @@ function dataBackFormat(el, resource) {
 const customDataProvider = {
     getList: async (resource, params) => {
         const { page, perPage } = params.pagination;
-        const url = `http://${server}/${resource}`;
+        const url = `http://localhost:3000/${resource}`;
 
         try {
             const response = await fetchUtils.fetchJson(url);
@@ -124,13 +124,13 @@ const customDataProvider = {
     },
 
     getOne: async (resource, params) => {
-        const url = `http://${server}/${resource}/${params.id}`;
+        const url = `http://localhost:3000/${resource}/${params.id}`;
         const response = await fetchUtils.fetchJson(url);
         return dataOneFormat(response.body, resource);
     },
 
     update: async (resource, params) => {
-        const url = `http://${server}/${resource}/${params.id}`;
+        const url = `http://localhost:3000/${resource}/${params.id}`;
         return await fetchUtils.fetchJson(url, {
             method: 'PUT',
             body: JSON.stringify(dataBackFormat(params.data, resource)),
@@ -157,7 +157,7 @@ const customDataProvider = {
 
     create: async (resource, params) => {
         const { data } = params;
-        return fetchUtils.fetchJson(`http://${server}/${resource}`, {
+        return fetchUtils.fetchJson(`http://localhost:3000/${resource}`, {
             method: 'POST',
             body: JSON.stringify(dataBackFormat(params.data, resource)),
             headers: new Headers({
