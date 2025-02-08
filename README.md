@@ -11,12 +11,13 @@ REST para disponibilizar os recursos para uma aplicação Web.
 Para este trabalho, foi escolhido o tema _Cosplay_, conforme indicado na [proposta](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/main/Documentos%20de%20Apoio/DWI_A06927_CamilaOlim_AvaliacaoFinal_Proposta.pdf) entregue, que é uma atividade na qual os praticantes realizam a caracterização e interpretação de personagens fictícias, tentando ao máximo replicar a sua aparência física e, por vezes, também encenar o seu comportamento.
 
 ## Conteúdos
-- [API REST](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-2/Parte2_%20Ficheiros)
+- [API REST e BD](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-2/Parte2_%20Ficheiros)
 - [CosplayAPI.postman_collection](https://github.com/inf24dw1g09/DW-Avaliacao-Final/blob/Parte-2/CosplayAPI.postman_collection.json)
 - [Documentos de apoio](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-2/Documentos%20de%20apoio)
 - [Relatório](https://github.com/inf24dw1g09/DW-Avaliacao-Final/tree/Parte-2/Relatorio)
 
 ## Ferramentas/Tecnologias
+- Visual Studio Code
 - Swagger
 - NodeJs
 - MySQL
